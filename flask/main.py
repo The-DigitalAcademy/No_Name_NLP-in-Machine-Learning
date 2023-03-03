@@ -18,7 +18,7 @@ def predict():
     # extract input features from the request data
     
     data =  np.array([
-                      float(request.form['message'])
+                      str(request.form['message'])
                      ])
     #Reshape data
     data = data.reshape(1, -1)
@@ -36,4 +36,4 @@ def predict():
     return render_template('predict.html',prediction=prediction,message = msg)
 
 if __name__ == '__main__':
-    app.run(debug=True,port=8080)
+    app.run(debug=True,port=8085)
