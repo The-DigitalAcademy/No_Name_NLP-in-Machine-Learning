@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>Wine Quality Prediction</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Wine Quality Prediction</h1>
+      <form action="{{ url_for('predict') }}" method="post">
+      
+        <label for="message">message</label>
+        <input type="text" id="message" name="message" required>
+       
+        <br>
+        <input type="submit" value="Predict">
+      </form>
+    </div>
+  </body>
+</html>
