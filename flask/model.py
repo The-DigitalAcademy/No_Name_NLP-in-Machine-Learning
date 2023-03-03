@@ -6,9 +6,19 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report
 
 #importing the csv
-spams= pd.read_csv("")
-spams["label"]=spams["v1"].map({'ham':0,'spam':1})
-spams["Message"]=spams["v2"]
+spams = pd.read_csv('/Users/da_learner_m1_19/Downloads/spam.csv', encoding="latin-1")
+spams['label'] = spams['v1'].map({'ham': 0, 'spam': 1})
+spams['message']=spams['v2']
+spams.drop(['Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4','v1','v2'], axis=1, inplace=True)
+#Balancing data
+ham=spams[spams["label"]==0]
+spam=spams[spams["label"]==1]
+ham=ham.sample(spam.shape[0])
+data=spam.append(ham,ignore_index=True)
+
+
+
+
 X=spams["Message"]
 Y=spams["label"]
 #fit the model
