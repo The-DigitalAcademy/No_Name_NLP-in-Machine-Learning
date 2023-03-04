@@ -1,0 +1,15 @@
+.prediction {
+    font-size: 24px;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .prediction .result {
+    font-weight: bold;
+    color: green;
+  }
+  
+  .prediction .label {
+    font-weight: bold;
+  }
+  
