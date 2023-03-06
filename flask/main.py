@@ -11,7 +11,7 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder
 
 
-model = jb.load('spams.joblib')
+model = jb.load('nlp/spams.joblib')
 
 app = Flask(__name__)
 
@@ -25,7 +25,7 @@ def index():
 
 def predict():
     # extract input features from the request data
-    spams = pd.read_csv("C:\\Users\\hlala\\Downloads\\spam.csv", encoding="latin-1")
+    spams = pd.read_csv('/Users/da_learner_m1_19/Downloads/spam.csv', encoding="latin-1")
     
     spams['label'] = spams['v1'].map({'ham': 0, 'spam': 1})
     spams['message']=spams['v2']
@@ -47,6 +47,10 @@ def predict():
         data = [message]
         vect = cv.transform(data).toarray()
         my_prediction = clf.predict(vect)
+        if my_prediction == 0:
+            my_prediction = "✅Not spam✅"
+        else:
+            my_prediction = "❗️❗️spam❗️❗️"
         
     # return the prediction as a json object
     return render_template('prediction.html',prediction=my_prediction)
