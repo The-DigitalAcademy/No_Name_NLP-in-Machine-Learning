@@ -1,5 +1,5 @@
 body {
-    background-color: #08a54f;
+    background-color: #7070ed;
     font-family: Arial, sans-serif;
 }
 
@@ -7,7 +7,7 @@ h1 {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
-    color: rgb(155, 24, 24);
+    color: rgb(13, 11, 11);
 }
 
 form {
@@ -33,7 +33,7 @@ input[type="text"] {
 
 input[type="submit"] {
     width: 100%;
-    background-color: #4CAF50;
+    background-color: #4c95af;
     color: white;
     padding: 14px 20px;
     margin-top: 20px;

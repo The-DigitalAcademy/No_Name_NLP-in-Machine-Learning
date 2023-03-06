@@ -1,0 +1,41 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Header styles */
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: #333;
+  margin-top: 50px;
+}
+
+/* Paragraph styles */
+p {
+  font-size: 1.2em;
+  text-align: center;
+  color: #666;
+  margin-top: 30px;
+}
+
+/* Link styles */
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Prediction styles */
+.prediction {
+  font-weight: bold;
+  color: green;
+}
+
+.prediction.spam {
+  color: red;
+}
